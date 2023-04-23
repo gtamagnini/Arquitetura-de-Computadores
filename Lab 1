@@ -1,0 +1,27 @@
+a) Mova para o endereço 30h o valor 20h;
+MOV 30H, #20H
+
+b) Mova para o endereço 40h o valor FFh;
+MOV 40H, #0FFh
+
+c) Mova para o registrador R4 o valor de 30h;
+MOV R4, 30H
+
+d) Mova para o endereço 50h o valor 30h;
+MOV 50H, #30H
+
+e) Mova para o acumulador o valor que está no registrador R4;
+MOV A, R4
+
+f) Decremente o valor do acumulador;
+DEC A
+
+g) Incremente o valor que está no registrador R4;
+INC R4
+
+h) Some o valor do acumulador com o valor de R4 e armazene em R2;
+ADD A, R4
+MOV R2, A
+
+i) Deixe o valor do acumulador como zero;
+MOV A, #0
