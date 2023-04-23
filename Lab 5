@@ -1,0 +1,41 @@
+Exercício 1
+org 0100h
+DELAY:
+MOV R2, #149 – 1 ciclo da máquina
+REPT:
+NOP
+DJNZ R2, REPT  (aqui repete 3 vezes)
+RET – 2 ciclos da máquina
+149*3 = 447
+447 + 2 = 449
+449 + 1 = 450 µs
+
+Exercício 2
+LJMP DELAY
+org 0100h
+DELAY:
+MOV R2, #99
+REPT:
+NOP
+DJNZ R2, REPT
+RET
+
+Exercício 3
+delay:
+mov R0, #67
+rot1:
+mov R1, #51
+rot2:
+djnz r1, rot2
+djnz r0, rot1
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+ret
