@@ -1,0 +1,68 @@
+Exercício 1
+MOV R4, #55
+MOV 30H, #42
+MOV A, 30H
+ADD A, R4
+MOV R1, #20
+MOV A, #0H
+MOV A, R4
+ADD A, R1
+MOV R4, A
+INC R4
+ADD A, R4
+MOV R4, A
+ADD A, @R1
+Exercício 2
+1 - MOV A,#00H = transforma o acumulador em 0
+2 - MOV 20H,#101B = atribui o endereço de memória para 5
+3 - MOV 31H,#10 = atribui 10 ao endereço de 31
+4 - MOV 32H,#30H = atribui o valor de 30 ao endereço 32
+5 - MOV R1,#30H = move o valor de 30 para R1
+6 - ADD A,R1 = adiciona o valor de 30 que estava em R1  no acumulador
+7 - ADD A,@R1 = soma o valor presente em A com R1 com acesso indireto 
+8 - INC R1 = incrementa o valor de R1, resultando em 31
+9 - ADD A,R1 = soma o valor de do acumulador com R1, resultando em 61
+10 - ADD A,@R1 = soma o valor de A com acesso indireto a R1, resultando em 68
+11 - INC R1 = incrementa o valor de R1, resultando em 32
+12 - ADD A,R1 = soma o valor do acumulador com o R1, resultando em 92
+13 - ADD A,@R1 = soma o valor do acumular com acesso indireto a R1, resultando em 95
+
+
+
+Exercício 3
+A)
+MOV A, R1
+ADD A, @R0
+
+B)
+INC R1
+ADD A, @R1
+
+C)
+ADD A, R2
+ADD A, R1
+MOV R4, A
+
+D)
+ADD A, @R0
+ADD A, @R1
+MOV R5, A
+
+Exercício 4
+MOV R5, #40H
+MOV R6, #23H
+MOV A, R5
+MOV B, R6
+MUL AB
+MOV R0, B
+MOV R1, A
+
+Exercício 5
+MOV R5, #50H
+MOV R4, #33H
+MOV A, R5
+MOV B, R4
+DIV AB
+MOV R0, A
+MOV R1, B
+
