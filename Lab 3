@@ -1,0 +1,26 @@
+Exercício 3
+LJMP main
+org 0080h
+main:
+MOV P1, #0FEh
+ACALL ROT_E
+ACALL ROT_D
+SJMP main
+org 0100h
+ROT_D:
+MOV A, P1
+MOV R0, #15
+ROT1:
+RR A
+MOV P1, A
+DJNZ R0, ROT1
+RET
+org 0020h
+ROT_E:
+MOV A, P1
+MOV R0, #15
+ROT2:
+RL A
+MOV P1, A
+DJNZ R0, ROT2
+RET
